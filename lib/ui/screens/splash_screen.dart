@@ -13,7 +13,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     Future.delayed(Duration(seconds: 3)).then((value)async {
       final String token = await getToken("api_token");
-      if (token != null || token.length >5) {
+      if (token != null) {
         print(token);
         Navigator.pushReplacementNamed(context, '/select');
 
